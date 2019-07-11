@@ -2,32 +2,30 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as oldActionCreator from '../actions'
-import { addTodo, addCountAsync} from '../actions'
-
+import { Button, } from 'antd'
+// import { addTodo, addCountAsync} from '../actions'
 let AddTodo = (props) => {
-  let input
-
+    let input
+    const confirm = e => {
+        e.preventDefault()
+        if (!input.value.trim()) {
+            return
+        }
+        props.addTodo(input.value)
+        props.addCountAsync({course_id: "1120728002"})
+        input.value = ''
+    }
   return (
     <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault()
-          if (!input.value.trim()) {
-            return
-          }
-          props.addTodo(input.value)
-          props.addCountAsync()
-          input.value = ''
-        }}
-      >
+      <form>
         <input
           ref={node => {
             input = node
           }}
         />
-        <button type="submit">
+        <Button type="primary" onClick={confirm}>
           Add Todo
-        </button>
+        </Button >
       </form>
     </div>
   )

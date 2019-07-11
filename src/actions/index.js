@@ -1,11 +1,17 @@
 
-import { getpass } from "../services/todos"
+import { getpass, koa } from "../services/todos"
 let nextTodoId = 0
+function comCreater (type, res){
+  return {
+    type: type,
+    payload: res.data.name
+  }
+}
 export const  addCountAsync = (data) => {
   return dispatch => {
       getpass(data)
       .then((res) => {
-        console.log(res)
+      // do sth
     })
   }
 }
@@ -29,5 +35,14 @@ export const toggleTodo = id => {
   return {
     type: 'TOGGLE_TODO',
     id
+  }
+}
+
+export const  getKoa = (data) => {
+  return dispatch => {
+    koa()
+    .then(res => {
+      dispatch(comCreater('NAME', res))
+    })
   }
 }

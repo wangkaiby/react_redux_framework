@@ -23,11 +23,16 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
+    let accessToken = JSON.parse(localStorage.getItem('userInfo'))
+    ? JSON.parse(localStorage.getItem('userInfo')).access_token
+    : ""
   return fetch(url, {
     credentials:'include',
     headers:{
         'content-type':'application/json;charset=UTF-8',
         'Accept': 'application/json, text/plain, */*',
+        'Dahai-Env-Selector': 'aitest',
+        'Dahai-Access-Token': accessToken,
     },
     ...options,
   })
