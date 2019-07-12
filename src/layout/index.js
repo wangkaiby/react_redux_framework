@@ -64,20 +64,23 @@ return(
               title={
                 <span>
                   <Icon type="user" />
-                  subnav 1
+                  学习栏
                 </span>
               }
             >
               <Menu.Item key="todos"><Link to="/todos">Todos</Link></Menu.Item>
               <Menu.Item key="login"><Link to="/home">Login</Link></Menu.Item>
               <Menu.Item key="koa"><Link to="/koa">Koa</Link></Menu.Item>
+              <Menu.Item key="hoc"><Link to="/hoc">Hoc</Link></Menu.Item>
+              <Menu.Item key="extends"><Link to="/extends">Extends</Link></Menu.Item>
+
             </SubMenu>
             <SubMenu
               key="sub2"
               title={
                 <span>
                   <Icon type="laptop" />
-                  subnav 2
+                   工具栏
                 </span>
               }
             >
