@@ -15,11 +15,4 @@ module.exports = function(app) {
        }
     )
   )
-  app.use(
-    proxy("/koaList", {
-        target: 'http://localhost:4000',
-        changeOrigin: true
-       }
-    )
-  )
 }
