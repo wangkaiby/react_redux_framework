@@ -9,10 +9,11 @@ import  Layout  from './layout'
 import Routers from './router' 
 
 import './index.css';
-
-
+const getConfirmation = (message, callback) => {
+window.confirm('message');
+}
 const Root = () => (
-  <BrowserRouter>
+<BrowserRouter getUserConfirmation={getConfirmation}>
     <Provider store={store}>
       <Layout>
         <Routers/>

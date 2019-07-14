@@ -73,7 +73,7 @@ return(
               <Menu.Item key="koa"><Link to="/koa">Koa</Link></Menu.Item>
               <Menu.Item key="hoc"><Link to="/hoc">Hoc</Link></Menu.Item>
               <Menu.Item key="extends"><Link to="/extends">Extends</Link></Menu.Item>
-
+              <Menu.Item key="usehook"><Link to="/usehook">usehook</Link></Menu.Item>
             </SubMenu>
             <SubMenu
               key="sub2"
