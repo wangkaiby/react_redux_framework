@@ -32,6 +32,15 @@ export async function authority() {
 
 export async function koa(params) {
 	return request(API.koa,{
+        method:'post',
+        body: JSON.stringify(params)
+
+	});
+}
+
+export async function getList() {
+	return request(API.getList,{
         method:'get',
+
 	});
 }
