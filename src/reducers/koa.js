@@ -1,10 +1,14 @@
-const koa = (state = {name: '我是原始数据'}, action) => {
+const koa = (state = {data: []}, action) => {
     switch (action.type) {
+
       case 'NAME':
         return {
-            ...state,
-            name: action.payload
+         data: action.payload
         }
+        case 'GETLIST':
+          return {
+           data: action.payload
+          }
       default:
         return state
     }
