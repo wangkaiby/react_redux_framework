@@ -79,7 +79,6 @@ const Koa = (props) => {
 
     
     const [visible, setVisible] = useState(false)
-    const [confirmLoading, setConfirmLoading] = useState(false)
 
     useEffect(() => {
         props.list()
@@ -91,29 +90,19 @@ const Koa = (props) => {
     const addNewData = () => {
         setVisible (true)
     }
-
-    const handleOk = () => {
-        setConfirmLoading (true)
-        setVisible(false)
-        setConfirmLoading(false)
-    }
-    const handleCancel = () => {
-        setVisible(false)
-
-    }
     const newData =[...props.data]
     newData.map((item, index)=>
         item.key= index.toString()
      )
-     console.log(props, 'props')
-
+    const handleCancel = () => {
+      setVisible(false)
+    } 
  return (
      <div>
          <Modal
           title="Title"
           visible={visible}
-          onOk={handleOk}
-          confirmLoading={confirmLoading}
+          footer={null}	
           onCancel={handleCancel}
         >
           <div>          

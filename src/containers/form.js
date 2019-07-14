@@ -58,10 +58,9 @@ import {
       this.props.form.validateFieldsAndScroll((err, values) => {
         if (!err) {
             this.props.getDate(values)
-          console.log('Received values of form: ', values);
+            this.props.form.resetFields()
         }
       });
-      this.props.form.resetFields()
     };
   
     handleWebsiteChange = value => {
