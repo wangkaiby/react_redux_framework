@@ -76,13 +76,10 @@ const columns = [
   
   
 const Koa = (props) => {
-
-    
     const [visible, setVisible] = useState(false)
-
     useEffect(() => {
-        props.list()
-    }, [props.match.path]);    
+      props.list()
+    }, [props.list, props]);    
     const getDate = (data)  =>{
         props.getKoa(data)
         setVisible(false)
