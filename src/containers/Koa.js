@@ -3,7 +3,7 @@ import {  Table, Divider, Tag, Button, Modal } from 'antd'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as oldActionCreator from '../actions'
-import WrappedRegistrationForm from './form'
+import WrappedRegistrationForm from './Form'
 // import HocInKoa  from './HocInKoa'
 // import Hocdemo from '../components/Hocdemo'
 
@@ -74,12 +74,13 @@ const columns = [
     },
   ];
   
-  
 const Koa = (props) => {
+    const receive = props.list
     const [visible, setVisible] = useState(false)
     useEffect(() => {
-      props.list()
-    }, [props.list, props]);    
+      // props.list()
+      receive()
+    }, [receive]);    
     const getDate = (data)  =>{
         props.getKoa(data)
         setVisible(false)
