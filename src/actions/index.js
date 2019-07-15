@@ -50,8 +50,14 @@ export const  getKoa = (data) => {
 export const  list = () => {
   return dispatch => {
     getList()
+    
     .then(res => {
-      dispatch(comCreater('GETLIST', res.data.data))
+      console.log(res.err.response)
+      if (res.err.response.ok === false){
+        dispatch(comCreater('GETLIST', []))
+      } else{
+        dispatch(comCreater('GETLIST', res.data.data))
+      }
     })
   }
 }
