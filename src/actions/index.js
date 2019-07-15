@@ -52,11 +52,10 @@ export const  list = () => {
     getList()
     
     .then(res => {
-      console.log(res.err.response)
-      if (res.err.response.ok === false){
-        dispatch(comCreater('GETLIST', []))
-      } else{
+      if (res.data){
         dispatch(comCreater('GETLIST', res.data.data))
+      } else{
+        dispatch(comCreater('GETLIST', []))
       }
     })
   }
