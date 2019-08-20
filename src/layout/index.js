@@ -84,7 +84,7 @@ return(
                 </span>
               }
             >
-              <Menu.Item key="5">option5</Menu.Item>
+              <Menu.Item key="5"><Link to="/lazy">suspense_lazy</Link></Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
