@@ -1,12 +1,11 @@
 import React from 'react';
-import Hocdemo from '../components/Hocdemo'
+// import Hocdemo from '../components/Hocdemo'
+import Dialog from '../components/dialog'
 
-export default class Parent extends Hocdemo {
+export default class Parent extends React.Component {
     render () {
         return (
-            <p>你好</p>
+            <Dialog>你好</Dialog>
         )
     }
 }
-
-
