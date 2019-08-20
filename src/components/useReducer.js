@@ -3,7 +3,7 @@ import React, { useReducer } from "react";
 import { reducer, init } from "./count.reducer";
 // import "./styles.css";
 import ChangeCount from "./changeCount";
-import { Link, Route, BrowserRouter } from "react-router-dom";
+// import { Link, Route, BrowserRouter } from "react-router-dom";
 // const initialCount = { count: 0 };
 const reducerContext = React.createContext();
 export { reducerContext };
