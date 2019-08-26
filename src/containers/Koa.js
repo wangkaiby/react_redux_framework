@@ -3,7 +3,7 @@ import {  Table, Divider, Tag, Button, Modal } from 'antd'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as oldActionCreator from '../actions'
-import WrappedRegistrationForm from './form'
+import WrappedRegistrationForm from './Form'
 // import HocInKoa  from './HocInKoa'
 // import Hocdemo from '../components/Hocdemo'
 
